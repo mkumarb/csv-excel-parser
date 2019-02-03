@@ -1,0 +1,67 @@
+<html><head>
+<!-- HANDSON_FILES -->
+<link rel="stylesheet" type="text/css" href="utils/handsontable-6.2.2.full.min.css">
+<script src="utils/handsontable-6.2.2.full.min.js"></script>
+<style>
+body{font-family:Helvetica,sans-serif;margin:2 0 0 0}.tab{margin-bottom:0 !important;text-align:center;list-style:none;padding:0 0 0 10px;line-height:24px;height:26px;overflow:hidden;font-size:12px;font-family:verdana;position:relative;margin:0}.tab li{margin-left:0 !important;float:left;height:24px;border:1px solid #aaa;background:#d1d1d1;background:linear-gradient(top, #ececec 50%, #d1d1d1);display:inline-block;position:relative;z-index:0;border-top-left-radius:6px;border-top-right-radius:6px;box-shadow:0 3px 3px rgba(0,0,0,0.4),inset 0 1px 0 #fff;text-shadow:0 1px #fff;margin:0 -5px;padding:0 20px}.tab li.active{background:#fff;color:#333;z-index:2}.tab li:before{left:-6px;border-width:0 1px 1px 0;box-shadow:2px 2px 0 #d1d1d1}.tab li:after{right:-6px;border-width:0 0 1px 1px;box-shadow:-2px 2px 0 #d1d1d1}.tab a{color:#555;text-decoration:none}.tab:before{position:absolute;content:" ";width:100%;bottom:0;left:0;border-bottom:1px solid #aaa;z-index:1}.tabcontent{margin-top:-1px}
+</style>
+</head><body>
+
+<ul class="tab" >
+<!-- BOOK_TAB -->
+<li id='pyexcel-d8b30d9873a24dd2bddf0f700cc859b4-sheet-li' class="pyexcel-56d63f56b9ad4051a4438967535801a5-book-li">
+<a href="javascript:void(0)" onClick="openTab(event, 'pyexcel-56d63f56b9ad4051a4438967535801a5-book', 'pyexcel-d8b30d9873a24dd2bddf0f700cc859b4-sheet')">XA_ENTITIES.csv</a>
+</li>
+
+</ul>
+<!-- BOOK_DIV -->
+<div id="pyexcel-d8b30d9873a24dd2bddf0f700cc859b4-sheet" class="tabcontent pyexcel-56d63f56b9ad4051a4438967535801a5-book">
+  <div id="pyexcel-d8b30d9873a24dd2bddf0f700cc859b4"></div>
+</div>
+
+
+<!-- BOOK_SCRIPTS -->
+<script>
+var config = {"colHeaders": true, "rowHeaders": true, "preventOverflow": "hornizontal", "readOnly": false, "columnSorting": true};
+var tableHandles = [];
+function openTab(evt, bookId, tabId) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName(bookId);
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName(bookId+"-li");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabId).style.display = "block";
+    document.getElementById(tabId+"-li").className += " active";
+}
+function activateFirst(bookId, firstTab) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName(bookId);
+    for (i = 1; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    document.getElementById(firstTab+'-li').className += " active";
+}
+// BOOK_SHEET
+  var sheetHandle = {};
+  sheetHandle.element = document.querySelector("#pyexcel-d8b30d9873a24dd2bddf0f700cc859b4");
+
+  var mydata = [["ENTITY_ID", "ENTITY_NAME", "ENTITY_DESC", "ENTITY_DRIVING_TABLE_ID", "CREATION_DATE", "CREATED_BY_AMUID", "LAST_UPDATE_DATE", "LAST_UPDATED_BY_AMUID", "EXCLUDE_FROM_RESTORE_FLAG", "ENTITY_TYPE", "META_APPLICATION_ID"], [-3, "CPE_A_MASTER_01", "Category 01 - Master CPE", -19, "5-Jun-17", 1, "6-Jun-17", 0, "", "A", -7], [-6, "CPE_A_MASTER_CAT2_01", "Category 2 - Master CPE", -130, "22-Jun-17", 1, "23-Aug-17", 1, "", "A", -7], [-4, "CPE_A_TRANSACTION_01", "Category 2 and 3 - CPE A Transaction Entity", -30, "5-Jun-17", 1, "21-Aug-17", 1, "", "A", -7], [-24, "CPE_A_TRANSACTION_01_HIST", "Category 3 - Payment Instruction History", -30, "27-Sep-18", 2, "27-Sep-18", 2, "", "A", -7], [-21, "CPE_A_TRANSACTION_01_IN", "Category 2 and 3 - CPE A Transaction Entity", -30, "23-Aug-17", 1, "4-Oct-17", 1, "", "A", -7], [-23, "CPE_A_TRANSACTION_01_OUT", "Category 2 and 3 - CPE A Transaction Entity", -30, "24-Aug-17", 1, "20-Dec-17", 1, "", "A", -7], [1026, "Jobs Entity", "Jobs Entity", 2, "10-Jun-10", 0, "22-Jun-10", 0, "", "A", 10004], [1027, "Audit Entity", "Audit Entity", 246918, "16-Jun-10", 0, "16-Jul-10", 0, "", "A", 10004], [12049, "CRM Attachments Part2", "", 1000104211, "29-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001103], [12017, "CRM Attachments Part1", "", 1000104211, "24-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001103], [12018, "CRM Attachment Links", "", 1000104218, "24-Jul-12", 0, "2-Aug-12", 0, "", "A", 1000001103], [12051, "ERP Attachments Part2", "", 1000104211, "29-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001102], [12019, "ERP Attachments Part1", "", 1000104211, "24-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001102], [12024, "ERP Attachment Links", "", 1000104218, "24-Jul-12", 0, "2-Aug-12", 0, "", "A", 1000001102], [12052, "SRM Attachments Part2", "", 1000104211, "29-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001104], [12014, "SRM Attachments Part1", "", 1000104211, "24-Jul-12", 0, "29-Jul-12", 0, "", "A", 1000001104], [12023, "SRM Attachment Links", "", 1000104218, "24-Jul-12", 0, "2-Aug-12", 0, "", "A", 1000001104], [-1, "IDA_TEST_01_ENTY", "", 0, "3-Sep-18", 0, "10-Sep-18", 4, "", "A", -1]];
+  var customStyle = {'notused': 'value'};
+  sheetHandle.config = Object.assign({}, config, customStyle);
+  sheetHandle.config.data = mydata;
+  sheetHandle.handsontable = new Handsontable(sheetHandle.element, sheetHandle.config);
+  sheetHandle.sheetId = "pyexcel-d8b30d9873a24dd2bddf0f700cc859b4";
+  if(tableHandles){
+    tableHandles.push(sheetHandle);
+  }
+
+activateFirst('pyexcel-56d63f56b9ad4051a4438967535801a5-book', 'pyexcel-d8b30d9873a24dd2bddf0f700cc859b4-sheet');
+					
+</script>
+
+</body></html>
+	
