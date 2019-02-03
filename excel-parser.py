@@ -13,11 +13,10 @@ def upload_file():
         fileName = os.path.splitext(upload_file.filename)[0]
         print(f'Files: {request.files}')
         request.files = None
-        test = cvt.create_data_viewer(upload_file,fileName)
-        print(test)
+        HtmlResponse = cvt.create_data_viewer(upload_file,fileName)
         print("can Delete")
         os.remove("templates/"+fileName+".parser.handsontable.html")
-        return test
+        return HtmlResponse
     return render_template("upload-file.html")
 
 

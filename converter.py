@@ -24,5 +24,5 @@ class ExcelConverter():
         )
         f = open("templates/"+fileName+".parser.handsontable.html", "r")
         os.remove(uploadfile_name)
-        # os.remove("templates/parser.handsontable.html")
+        
         return f.read()
