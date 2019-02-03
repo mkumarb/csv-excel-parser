@@ -28,10 +28,10 @@ def create_data_viewer(uploadedfile):
 @app.route("/", methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        upload_file = request.files['uploadedfile']
+        uploaded_file = request.files['uploadedfile']
         print(f'Files: {request.files}')
         request.files = None
-        create_data_viewer(upload_file)
+        create_data_viewer(uploaded_file)
         return render_template("parser.handsontable.html")
     return render_template("upload-file.html")
 
